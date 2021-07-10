@@ -192,11 +192,12 @@ var active;
 var winner = 1;
 var target;
 
-document.getElementById("input").value = 121;
-document.getElementById("input").focus();
-
 updateScores(scores);
 updateButtonDisplays(winner);
+
+document.getElementById("input").value = 121;
+document.getElementById("input").focus();
+document.getElementById("input").setSelectionRange(3, 3);
 
 function handleKeyDown(evt) {
     switch (evt.key) {
