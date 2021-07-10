@@ -33,6 +33,7 @@ header {
 
     &-key {
         padding: 0.2rem;
+        width: fit-content;
     }
 
     &-key-major {
@@ -46,10 +47,17 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 100vh;
+
+    .top {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
 }
 
 .scores {
     display: flex;
+    height: 100%;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
@@ -67,11 +75,34 @@ header {
         font-size: 1.5rem;
         padding: 0.2rem;
         margin-bottom: 0.2rem;
+        border-bottom: 0.1rem $bg-color solid;
+        border-top: 0.1rem $bg-color solid;
     }
 
     .active {
         font-weight: 600;
         border-bottom: 0.1rem fade-out($text-color, 0.2) solid;
+    }
+
+    .winner {
+        border-top: 0.1rem gold solid;
+    }
+}
+
+input {
+    font: inherit;
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    text-align: center;
+    color: transparent;
+    text-shadow: 0 0 0 #fff;
+
+    &:focus {
+        outline: none;
     }
 }
 

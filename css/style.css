@@ -31,6 +31,9 @@ header h1 {
 }
 .software-key {
   padding: 0.2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .software-key-major {
   font-weight: bold;
@@ -43,9 +46,15 @@ header h1 {
   justify-content: space-between;
   height: 100vh;
 }
+.main .top {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 .scores {
   display: flex;
+  height: 100%;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
@@ -61,10 +70,31 @@ header h1 {
   font-size: 1.5rem;
   padding: 0.2rem;
   margin-bottom: 0.2rem;
+  border-bottom: 0.1rem #000 solid;
+  border-top: 0.1rem #000 solid;
 }
 .scores .active {
   font-weight: 600;
   border-bottom: 0.1rem rgba(255, 255, 255, 0.8) solid;
+}
+.scores .winner {
+  border-top: 0.1rem gold solid;
+}
+
+input {
+  font: inherit;
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  text-align: center;
+  color: transparent;
+  text-shadow: 0 0 0 #fff;
+}
+input:focus {
+  outline: none;
 }
 
 .input {

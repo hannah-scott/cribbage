@@ -14,7 +14,7 @@
                     <h1>crbbg</h1>
                 </header>
                 <div class="scores">
-                    <div id="player-1" class="score">
+                    <div id="player1" class="score">
                         <div class="total active">100</div>
                         <div class="running">
                             <ul>
@@ -28,7 +28,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="player-1" class="score">
+                    <div id="player2" class="score">
                         <div class="total">98</div>
                         <div class="running">
                             <ul>
@@ -42,21 +42,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="input">10</div>
+                <div class="input">
+                    <input type="tel" id="input" min="0" />
+                </div>
             </div>
             <div class="software bottom">
-                <div id="btn-pause" class="software-key software-key-minor">
+                <div id="btn-undo" class="software-key software-key-minor">
                     Undo
                 </div>
-                <div id="btn-start" class="software-key software-key-major">
+                <div id="btn-add" class="software-key software-key-major">
                     Add
                 </div>
-                <div id="btn-reset" class="software-key software-key-minor">
+                <div id="btn-switch" class="software-key software-key-minor">
                     Switch
                 </div>
             </div>
         </div>
 
         <div class="dialog"></div>
+
+        <script src="/main.js"></script>
     </body>
 </html>
