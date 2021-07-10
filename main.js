@@ -123,8 +123,12 @@ function checkForWinner(dict = scores) {
             .getElementsByClassName("total")[0]
             .classList.remove("winner");
 
-        document.getElementById("btn-undo").innerHTML = null;
-        document.getElementById("btn-switch").innerHTML = null;
+        document.getElementById("sft-undo").innerHTML = null;
+        document.getElementById("sft-switch").innerHTML = null;
+        document.getElementById("sft-add").innerHTML = "New game?";
+
+        document.getElementById("btn-undo").classList.add("hidden");
+        document.getElementById("btn-switch").classList.add("hidden");
         document.getElementById("btn-add").innerHTML = "New game?";
     } else {
         document
@@ -136,8 +140,12 @@ function checkForWinner(dict = scores) {
             .getElementsByClassName("total")[0]
             .classList.remove("winner");
 
-        document.getElementById("btn-undo").innerHTML = "Undo";
-        document.getElementById("btn-switch").innerHTML = "Switch";
+        document.getElementById("sft-undo").innerHTML = "Undo";
+        document.getElementById("sft-switch").innerHTML = "Switch";
+        document.getElementById("sft-add").innerHTML = "Add";
+
+        document.getElementById("btn-undo").classList.remove("hidden");
+        document.getElementById("btn-switch").classList.remove("hidden");
         document.getElementById("btn-add").innerHTML = "Add";
     }
 }
@@ -149,8 +157,12 @@ function startNewGame(dict = scores) {
     active = 0;
     winner = 0;
 
-    document.getElementById("btn-undo").innerHTML = "Undo";
-    document.getElementById("btn-switch").innerHTML = "Switch";
+    document.getElementById("sft-undo").innerHTML = "Undo";
+    document.getElementById("sft-switch").innerHTML = "Switch";
+    document.getElementById("sft-add").innerHTML = "Add";
+
+    document.getElementById("btn-undo").classList.remove("hidden");
+    document.getElementById("btn-switch").classList.remove("hidden");
     document.getElementById("btn-add").innerHTML = "Add";
 
     updateScores(dict);
@@ -216,3 +228,17 @@ function handleKeyDown(evt) {
 }
 
 document.addEventListener("keydown", handleKeyDown);
+
+document.getElementById("btn-undo").onclick = function () {
+    undoScore();
+};
+document.getElementById("btn-switch").onclick = function () {
+    switchPlayer();
+};
+document.getElementById("btn-add").onclick = function () {
+    if (winner == 0) {
+        addScore();
+    } else {
+        startNewGame();
+    }
+};
