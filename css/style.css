@@ -70,15 +70,15 @@ header h1 {
   font-size: 1.5rem;
   padding: 0.2rem;
   margin-bottom: 0.2rem;
-  border-bottom: 0.1rem #000 solid;
-  border-top: 0.1rem #000 solid;
+  border-bottom: 0.2rem #000 solid;
+  border-top: 0.2rem #000 solid;
 }
 .scores .active {
   font-weight: 600;
-  border-bottom: 0.1rem rgba(255, 255, 255, 0.8) solid;
+  border-bottom: 0.2rem rgba(255, 255, 255, 0.8) solid;
 }
 .scores .winner {
-  border-top: 0.1rem gold solid;
+  border-top: 0.2rem gold solid;
 }
 
 input {

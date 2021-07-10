@@ -75,17 +75,17 @@ header {
         font-size: 1.5rem;
         padding: 0.2rem;
         margin-bottom: 0.2rem;
-        border-bottom: 0.1rem $bg-color solid;
-        border-top: 0.1rem $bg-color solid;
+        border-bottom: 0.2rem $bg-color solid;
+        border-top: 0.2rem $bg-color solid;
     }
 
     .active {
         font-weight: 600;
-        border-bottom: 0.1rem fade-out($text-color, 0.2) solid;
+        border-bottom: 0.2rem fade-out($text-color, 0.2) solid;
     }
 
     .winner {
-        border-top: 0.1rem gold solid;
+        border-top: 0.2rem gold solid;
     }
 }
 

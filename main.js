@@ -101,7 +101,7 @@ function checkForWinner(dict = scores) {
         }
     }
 
-    if (max[1] > 120) {
+    if (max[1] >= target) {
         winner = 1;
     } else {
         winner = 0;
@@ -123,13 +123,9 @@ function checkForWinner(dict = scores) {
             .getElementsByClassName("total")[0]
             .classList.remove("winner");
 
-        document.getElementById("sft-undo").innerHTML = null;
-        document.getElementById("sft-switch").innerHTML = null;
-        document.getElementById("sft-add").innerHTML = "New game?";
+        updateButtonDisplays(winner);
 
-        document.getElementById("btn-undo").classList.add("hidden");
-        document.getElementById("btn-switch").classList.add("hidden");
-        document.getElementById("btn-add").innerHTML = "New game?";
+        document.getElementById("input").value = 121;
     } else {
         document
             .getElementById(getActivePlayerKey(dict))
@@ -140,6 +136,36 @@ function checkForWinner(dict = scores) {
             .getElementsByClassName("total")[0]
             .classList.remove("winner");
 
+        updateButtonDisplays(winner);
+    }
+}
+
+function startNewGame(dict = scores) {
+    const t = document.getElementById("input").value;
+
+    dict["player1"] = [];
+    dict["player2"] = [];
+    updateScores(dict);
+
+    if (t > 0) {
+        target = t;
+    } else {
+        target = 121;
+    }
+
+    document.getElementById("input").value = null;
+
+    active = 0;
+    winner = 0;
+
+    updateButtonDisplays(winner);
+
+    updateScores(dict);
+    checkForWinner(dict);
+}
+
+function updateButtonDisplays(winner) {
+    if (winner == 0) {
         document.getElementById("sft-undo").innerHTML = "Undo";
         document.getElementById("sft-switch").innerHTML = "Switch";
         document.getElementById("sft-add").innerHTML = "Add";
@@ -147,39 +173,30 @@ function checkForWinner(dict = scores) {
         document.getElementById("btn-undo").classList.remove("hidden");
         document.getElementById("btn-switch").classList.remove("hidden");
         document.getElementById("btn-add").innerHTML = "Add";
+    } else {
+        document.getElementById("sft-undo").innerHTML = null;
+        document.getElementById("sft-switch").innerHTML = null;
+        document.getElementById("sft-add").innerHTML = "Start";
+
+        document.getElementById("btn-undo").classList.add("hidden");
+        document.getElementById("btn-switch").classList.add("hidden");
+        document.getElementById("btn-add").innerHTML = "Start";
     }
-}
-
-function startNewGame(dict = scores) {
-    dict["player1"] = [];
-    dict["player2"] = [];
-
-    active = 0;
-    winner = 0;
-
-    document.getElementById("sft-undo").innerHTML = "Undo";
-    document.getElementById("sft-switch").innerHTML = "Switch";
-    document.getElementById("sft-add").innerHTML = "Add";
-
-    document.getElementById("btn-undo").classList.remove("hidden");
-    document.getElementById("btn-switch").classList.remove("hidden");
-    document.getElementById("btn-add").innerHTML = "Add";
-
-    updateScores(dict);
-    checkForWinner(dict);
 }
 
 var scores = {
     player1: [],
     player2: [],
 };
-var active = 0;
-var winner = 0;
+var active;
+var winner = 1;
+var target;
 
-document.getElementById("input").value = null;
+document.getElementById("input").value = 121;
 document.getElementById("input").focus();
 
-updateScores();
+updateScores(scores);
+updateButtonDisplays(winner);
 
 function handleKeyDown(evt) {
     switch (evt.key) {
