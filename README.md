@@ -15,9 +15,7 @@ You can start using `cribbage` from a browser at [cribbage.hd-dn.com](https://cr
 
 ## Installation
 
-You can install `cribbage` by cloning the repository and sideloading it to your KaiOS device.
-
-If you haven't done so before I recommend following [Martin Kaptein's guide to sideloading apps](https://kaptein.me/blog/sideloading-and-deploying-apps-to-kai-os/).
+You can install `cribbage` by cloning the repository and sideloading it to your KaiOS device. If you haven't done so before I recommend following [Martin Kaptein's guide to sideloading apps](https://kaptein.me/blog/sideloading-and-deploying-apps-to-kai-os/).
 
 If you have npm installed you can also use [gdeploy](https://gitlab.com/suborg/gdeploy/), a CLI application manager for KaiOS devices.
 
