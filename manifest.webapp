@@ -1,5 +1,5 @@
 {
-    "name": "crbbg",
+    "name": "cribbage",
     "description": "A cribbage score-tracker for KaiOS",
     "launch_path": "/index.html",
     "display": "standalone",
