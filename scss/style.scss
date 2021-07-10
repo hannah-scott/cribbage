@@ -1,0 +1,83 @@
+@import "config";
+
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: $bg-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 0.2rem;
+    h1 {
+        font-size: 1rem;
+    }
+}
+
+.software {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $bg-color;
+    background: $software-color;
+
+    &-key {
+        padding: 0.2rem;
+    }
+
+    &-key-major {
+        font-weight: bold;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.scores {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    justify-items: space-between;
+
+    ul {
+        list-style-type: none;
+    }
+
+    li {
+        padding: 0.2rem;
+    }
+
+    .total {
+        font-size: 1.5rem;
+        padding: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .active {
+        font-weight: 600;
+        border-bottom: 0.1rem fade-out($text-color, 0.2) solid;
+    }
+}
+
+.input {
+    font-size: 1.2rem;
+    border-top: 0.1rem fade-out($text-color, 0.2) solid;
+    width: 12rem;
+    padding: 0.1rem;
+}
