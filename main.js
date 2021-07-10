@@ -143,16 +143,18 @@ function checkForWinner(dict = scores) {
 }
 
 function startNewGame(dict = scores) {
-    dict = {
-        player1: [],
-        player2: [],
-    };
+    dict["player1"] = [];
+    dict["player2"] = [];
+
     active = 0;
     winner = 0;
 
     document.getElementById("btn-undo").innerHTML = "Undo";
     document.getElementById("btn-switch").innerHTML = "Switch";
     document.getElementById("btn-add").innerHTML = "Add";
+
+    updateScores(dict);
+    checkForWinner(dict);
 }
 
 var scores = {

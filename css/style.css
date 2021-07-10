@@ -83,23 +83,20 @@ header h1 {
 
 input {
   font: inherit;
-  background-color: inherit;
+  background-color: #333333;
   border: none;
   color: inherit;
   font-family: inherit;
   -moz-appearance: textfield;
   -webkit-appearance: none;
   text-align: center;
-  color: transparent;
-  text-shadow: 0 0 0 #fff;
-}
-input:focus {
-  outline: none;
+  border-bottom: 0.1rem rgba(255, 255, 255, 0.8) solid;
 }
 
 .input {
   font-size: 1.2rem;
-  border-top: 0.1rem rgba(255, 255, 255, 0.8) solid;
   width: 12rem;
   padding: 0.1rem;
+  background-color: #333333;
+  margin-bottom: 0.2rem;
 }
