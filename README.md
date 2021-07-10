@@ -22,7 +22,7 @@ If you haven't done so before I recommend following [Martin Kaptein's guide to s
 If you have npm installed you can also use [gdeploy](https://gitlab.com/suborg/gdeploy/), a CLI application manager for KaiOS devices.
 
 1. Download and install gdeploy
-2. Clone the repository and `cd` into it
+2. Clone the `cribbage` repository and `cd` into it
 3. Put your phone into debug mode (try dialling "\*#\*#33284#\*#\*" or "\*#\*#debug#\*#\*") and connect it
 
 **Note:** The next step will remove _all_ sideloaded applications with "cribbage" in the name. In the unlikely event that one of your own applications matches this, **do not run the next step without modifying `install.sh`**.
