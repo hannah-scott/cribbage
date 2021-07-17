@@ -6,6 +6,18 @@ function sum(array) {
     return o;
 }
 
+function getWindowListLength() {
+    const h = window.innerHeight;
+    const w = window.innerWidth;
+    const fh = parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+    if (w <= 250) {
+        return Math.floor((h - 12.625 * fh) / fh);
+    }
+
+    return Math.floor((h - 19 * fh) / fh);
+}
+
 function setScore(id, array) {
     const sc = document.getElementById(id);
     const ul = sc.getElementsByClassName("running")[0].children[0];
@@ -13,7 +25,7 @@ function setScore(id, array) {
     sc.getElementsByClassName("total")[0].innerHTML = sum(array);
 
     ul.innerHTML = "";
-    for (var i = 0; i < Math.min(array.length, 6); i++) {
+    for (var i = 0; i < Math.min(array.length, getWindowListLength()); i++) {
         var item = document.createElement("li");
 
         item.innerHTML = array[array.length - i - 1];
