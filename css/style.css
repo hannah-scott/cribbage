@@ -8,8 +8,8 @@
 body {
   font-family: sans-serif;
   text-align: center;
-  background-color: #000;
-  color: #fff;
+  background-color: #3009a0;
+  color: #ffee06;
   margin: 0;
   padding: 0;
 }
@@ -26,8 +26,8 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
-  background: #bbb;
+  color: #3009a0;
+  background: #ffee06;
 }
 .software-key {
   padding: 0.2rem;
@@ -70,34 +70,34 @@ header h1 {
   font-size: 1.5rem;
   padding: 0.2rem;
   margin-bottom: 0.2rem;
-  border-bottom: 0.2rem #000 solid;
-  border-top: 0.2rem #000 solid;
+  border-bottom: 0.2rem #3009a0 solid;
+  border-top: 0.2rem #3009a0 solid;
 }
 .scores .active {
   font-weight: 600;
-  border-bottom: 0.2rem rgba(255, 255, 255, 0.8) solid;
+  border-bottom: 0.2rem rgba(255, 238, 6, 0.8) solid;
 }
 .scores .winner {
-  border-top: 0.2rem gold solid;
+  border-top: 0.2rem #ffee06 solid;
 }
 
 input {
   font: inherit;
-  background-color: #333333;
+  background-color: #541df2;
   border: none;
   color: inherit;
   font-family: inherit;
   -moz-appearance: textfield;
   -webkit-appearance: none;
   text-align: center;
-  border-bottom: 0.1rem rgba(255, 255, 255, 0.8) solid;
+  border-bottom: 0.1rem rgba(255, 238, 6, 0.8) solid;
 }
 
 .input {
   font-size: 1.2rem;
   width: 12rem;
   padding: 0.1rem;
-  background-color: #333333;
+  background-color: #541df2;
   margin-bottom: 0.2rem;
 }
 
@@ -121,9 +121,9 @@ input {
     margin: 1rem;
     padding: 0.5rem 0.5rem;
     max-width: 8rem;
-    background-color: #000;
-    border: 1px #fff solid;
-    color: #fff;
+    background-color: #3009a0;
+    border: 1px #ffee06 solid;
+    color: #ffee06;
   }
 
   .hidden {
