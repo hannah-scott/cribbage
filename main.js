@@ -167,7 +167,6 @@ function startNewGame(dict = scores) {
 
     document.getElementById("input").value = null;
 
-    active = 0;
     winner = 0;
 
     updateButtonDisplays(winner);
@@ -200,7 +199,7 @@ var scores = {
     player1: [],
     player2: [],
 };
-var active;
+var active = 0;
 var winner = 1;
 var target;
 
