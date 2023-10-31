@@ -232,10 +232,14 @@ function handleKeyDown(evt) {
             switchPlayer();
             break;
         case "ArrowLeft":
-            switchToPlayer("player1");
+            if (winner == 0) {
+                switchToPlayer("player1");
+            }
             break;
         case "ArrowRight":
-            switchToPlayer("player2");
+            if (winner == 0) {
+                switchToPlayer("player2");
+            }
             break;
 
         case "SoftLeft":
@@ -259,10 +263,15 @@ function handleKeyDown(evt) {
 document.addEventListener("keydown", handleKeyDown);
 
 document.getElementById("btn-undo").onclick = function () {
-    undoScore();
+    if (winner == 0) {
+        undoScore();
+    }
 };
 document.getElementById("btn-switch").onclick = function () {
-    switchPlayer();
+    if (winner == 0) {
+        switchPlayer();
+    }
+    
 };
 document.getElementById("btn-add").onclick = function () {
     if (winner == 0) {
